@@ -13,7 +13,7 @@ After some exploration of the data, I found that 9.36% of transactions were frau
 <H5 align="center">IP Addresses and Countries</H5>
 The first task in my analysis was to map each user's IP address to its country of origin, using data from both tables. I checked each IP address against the lower and upper bounds for each of the 140,000 IP bands to match each to a country. This was a computationally slow process, but could probably be greatly improved in the future using hashing tables. Of all the IP addresses matched, about 22,000 were from an "Unknown" country. With about 14,000 fraudulent transactions, 10 countries accounted for 80% of all fraud. 39% of fraudulent events were from IP addresses within the United States, and 13% were from an "Unknown" country. For this reason, I chose not to include a user's country as a feature in predicting fraud.
 
-<p align="center"><img src="percent_fraud_by_country.png" width="800" /></p>
+<p align="center"><img src="https://github.com/jkvalentine/Fraud_Detection/blob/master/images/percent_fraud_by_country.png?raw=true" width="800" /></p>
 
 <H5 align="center">Feature Engineering</H5>
 In my data exploration, I found that 42% of all fraudulent transactions were performed using the Chrome web browser. With only 5 browsers logged, this seemed significant, and so I used this as a feature in my model. 
